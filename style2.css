@@ -1,0 +1,153 @@
+/* === Tema BASH / HACKER — style1.css === */
+
+/* Palette: terminal green su fondo nero */
+:root{
+    --bg: #020204;
+    --panel: #071018;
+    --fg: #b7f29b;      /* verde chiaro */
+    --fg-dim: #7da776;  /* verde attenuato */
+    --accent: #32ffd6;  /* ciano per link/highlight */
+    --muted: #4a5a4a;
+    --border: #0b1a12;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --glass: rgba(255,255,255,0.02);
+  }
+  
+  /* Reset e base */
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--mono);-webkit-font-smoothing:antialiased}
+  body{line-height:1.6;padding:1.2rem}
+  
+  /* Container */
+  main{max-width:980px;margin:0 auto;padding:0 1rem}
+  
+  /* Header: small "prompt" badge */
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;margin-bottom:1rem;padding:.6rem 1rem;
+    background:linear-gradient(180deg,var(--panel), rgba(0,0,0,0.15));
+    border:1px solid var(--border); border-radius:8px;
+    box-shadow:0 6px 24px rgba(0,0,0,0.6) inset;
+  }
+  header h1{margin:0;font-size:1.25rem;color:var(--fg)}
+  header h1 small{color:var(--fg-dim);font-weight:600;margin-left:.45rem}
+  
+  /* Nav looks like terminal chips */
+  nav[aria-label="Indice"] a{
+    color:var(--fg-dim);
+    text-decoration:none;
+    padding:.25rem .5rem;border-radius:6px;margin-right:.4rem;
+    border:1px solid transparent;font-size:.92rem;
+    background:transparent;
+  }
+  nav[aria-label="Indice"] a:hover{color:var(--accent);border-color:rgba(50,255,214,0.08);transform:translateY(-1px)}
+  
+  /* Article cards: glassy panels */
+  article{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), var(--glass));
+    border:1px solid var(--border);
+    padding:1rem;
+    margin:1rem 0;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  }
+  
+  /* Quick facts: terminal table */
+  aside.quick-facts{
+    background:#02100a;
+    border:1px solid #09321b;
+    padding:.75rem;border-radius:8px;color:var(--fg-dim);
+  }
+  aside.quick-facts ul{margin:0;padding-left:1rem}
+  aside.quick-facts li{margin:.25rem 0}
+  
+  /* Figures: image with green frame */
+  figure{
+    border:1px solid #08321a;
+    padding:.6rem;border-radius:8px;margin:0.8rem 0;background:linear-gradient(180deg, rgba(0,0,0,0.06), transparent);
+  }
+  figure img{display:block;max-width:100%;border-radius:6px;filter:contrast(.95) saturate(.8)}
+  figcaption{color:var(--fg-dim);font-size:.95rem;margin-top:.4rem}
+  
+  /* Headings: monospace + small "prompt" line */
+  h2{color:var(--fg);margin:0 0 .6rem;font-size:1.2rem}
+  h2::before{content:"$";color:var(--accent);margin-right:.45rem}
+  h3{color:var(--fg-dim);margin:.5rem 0 .4rem;font-size:1rem}
+  
+  /* Definition list: two columns, like key/value in config */
+  dl{display:grid;grid-template-columns:180px 1fr;gap:.4rem 1rem}
+  dt{color:var(--accent);font-weight:700}
+  dd{color:var(--fg);margin:0}
+  
+  /* Tables: compact terminal table */
+  table{
+    width:100%;border-collapse:collapse;margin-top:.6rem;
+    color:var(--fg);font-size:.95rem;border:1px solid var(--border);
+  }
+  th,td{padding:.55rem .6rem;border-bottom:1px dashed #062014;text-align:left}
+  thead th{color:var(--fg-dim);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+  tbody tr:hover td{background:rgba(50,255,214,0.02)}
+  
+  /* Details: box with subtle glow when open */
+  details{
+    background:transparent;border:1px solid #072013;padding:.5rem;border-radius:6px;margin:.5rem 0;color:var(--fg-dim)
+  }
+  details[open]{box-shadow:0 0 12px rgba(50,255,214,0.03);border-color:#0b4f37}
+  summary{cursor:pointer;color:var(--accent);font-weight:700}
+  
+  /* meters & progress: neon bars */
+  .skill-list{list-style:none;padding:0;margin:0}
+  .skill-list li{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px dashed #062014}
+  meter,progress{width:220px;height:.9rem;border-radius:999px;overflow:hidden}
+  meter::-webkit-meter-bar{background:#04120a}
+  meter::-webkit-meter-optimum-value{background:linear-gradient(90deg,var(--fg),var(--accent))}
+  progress::-webkit-progress-value{background:linear-gradient(90deg,var(--fg),var(--accent))}
+  
+  /* Code-like inline elements */
+  code,kbd{
+    font-family:var(--mono);background:#02140b;padding:0 .35rem;border-radius:6px;border:1px solid #06321a;color:var(--fg);
+  }
+  
+  /* Blockquote: terminal note */
+  blockquote{
+    border-left:4px solid #08321a;padding-left:.8rem;color:var(--fg-dim);margin:1rem 0;background:linear-gradient(90deg, rgba(0,0,0,0.02), transparent);
+  }
+  
+  /* Links: neon cyan */
+  a{color:var(--accent);text-decoration:underline dotted}
+  a:hover{color:#7df6e6}
+  
+  /* Tiny "hacker" flourishes: caret & prompt line */
+  .header-prompt{
+    display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);color:var(--fg-dim)
+  }
+  .header-prompt .caret{
+    width:10px;height:20px;border-left:2px solid var(--accent);margin-left:.2rem;
+    animation:blink 1s steps(2,start) infinite;
+    transform:translateY(1px);
+  }
+  @keyframes blink{50%{opacity:.05}100%{opacity:1}}
+  
+  /* Optional fancy: matrix column on the right for big screens */
+  @media(min-width:1100px){
+    body::after{
+      content:"";
+      position:fixed;right:12px;top:80px;width:120px;height:60vh;pointer-events:none;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.6)),
+        repeating-linear-gradient(180deg, rgba(50,255,214,0.02) 0 2px, transparent 2px 6px);
+      border-left:1px solid rgba(0,255,200,0.03);border-radius:6px;
+      filter:blur(0.4px);
+    }
+  }
+  
+  /* Accessibility focus ring */
+  :where(a,button,summary):focus{outline:2px dashed rgba(50,255,214,0.18);outline-offset:3px;border-radius:6px}
+  
+  /* Small screens spacing */
+  @media(max-width:640px){
+    dl{grid-template-columns:1fr}
+    header{flex-direction:column;align-items:flex-start}
+    nav[aria-label="Indice"]{margin-top:.5rem}
+  }
+  

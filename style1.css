@@ -1,0 +1,197 @@
+/* === Tema GIOCOSO — style1.css === */
+:root{
+    --bg:#fffbe9;
+    --fg:#2c2a1e;
+    --muted:#5f5b40;
+    --acc:#ff7aa2;
+    --acc2:#5a3a8b;
+    --card:#fff4c8;
+    --border:#f0e3a2;
+    --sans: "Comic Sans MS","Comic Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  /* Reset base */
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.65}
+  
+  /* Header & nav */
+  header{
+    padding:1rem;
+    background:linear-gradient(90deg,#ffe6f0,#fff4c8);
+    border-bottom:4px dotted var(--acc);
+  }
+  header h1{
+    margin:.2rem 0 .6rem;
+    font-weight:800;
+    letter-spacing:.3px;
+  }
+  header h1 small{
+    font-weight:600;
+    color:var(--acc2);
+  }
+  nav[aria-label="Indice"] a{
+    display:inline-block;
+    margin:.2rem .6rem .2rem 0;
+    padding:.2rem .45rem;
+    text-decoration:none;
+    color:#fff;
+    background:var(--acc2);
+    border-radius:999px;
+    border:2px solid transparent;
+    transition:transform .06s ease, box-shadow .06s ease;
+  }
+  nav[aria-label="Indice"] a:hover{
+    transform:translateY(-1px);
+    box-shadow:0 2px 0 rgba(0,0,0,.15);
+  }
+  nav[aria-label="Indice"] a:focus{outline:none;border-color:#fff}
+  
+  /* Layout */
+  main{max-width:960px;margin:1rem auto;padding:0 1rem}
+  article{margin:1rem 0}
+  
+  /* Box informativi */
+  aside.quick-facts{
+    background:var(--card);
+    border:3px dashed var(--border);
+    padding:.8rem 1rem;
+    border-radius:16px;
+    box-shadow:0 2px 0 rgba(0,0,0,.06)
+  }
+  aside.quick-facts ul{margin:.2rem 0 0 1rem}
+  aside.quick-facts li{margin:.25rem 0}
+  
+  /* Figure */
+  figure{
+    background:#fff;
+    border:3px dotted var(--border);
+    padding:.6rem;
+    border-radius:16px;
+    margin:1rem 0;
+  }
+  figure img{max-width:100%;border-radius:12px;display:block}
+  figcaption{margin-top:.35rem;color:var(--muted)}
+  
+  /* Titoli */
+  h2{margin:.2rem 0 .5rem;font-size:1.5rem}
+  h3{margin:.4rem 0 .4rem;font-size:1.15rem;color:var(--acc2)}
+  
+  /* Definition list “profilo in 6 campi” */
+  dl{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:.5rem 1rem;
+    background:#fff;
+    border:3px dashed var(--border);
+    border-radius:14px;
+    padding:.8rem 1rem;
+  }
+  dt{
+    color:var(--acc2);
+    font-weight:700;
+  }
+  dd{margin:0}
+  
+  /* Tabelle (Pro & Contro) */
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    background:#fff;
+    border:3px dotted var(--border);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  caption{
+    caption-side:top;
+    padding:.6rem;
+    font-weight:700;
+    color:var(--acc2);
+  }
+  thead th{
+    background:#ffe6f0;
+    color:#3c2a5e;
+  }
+  th,td{
+    padding:.65rem .7rem;
+    border-bottom:2px solid var(--border);
+  }
+  tbody tr:last-child td{border-bottom:0}
+  
+  /* Details/Q&A */
+  details{
+    background:#fff;
+    border:2px dashed var(--border);
+    border-radius:12px;
+    padding:.6rem .8rem;
+    margin:.6rem 0;
+  }
+  details[open]{border-color:var(--acc)}
+  summary{
+    cursor:pointer;
+    font-weight:700;
+    color:var(--acc2);
+  }
+  
+  /* Evidenziazione */
+  mark{
+    background:#fff1a6;
+    padding:0 .2rem;
+    border-radius:.25rem;
+  }
+  
+  /* Skill list con meter/progress */
+  .skill-list{
+    list-style:none;
+    padding:0;
+    margin:.4rem 0 1rem;
+    background:#fff;
+    border:3px dashed var(--border);
+    border-radius:14px;
+  }
+  .skill-list li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.55rem .8rem;
+    border-bottom:2px dashed var(--border);
+  }
+  .skill-list li:last-child{border-bottom:0}
+  
+  meter, progress{
+    width:240px;
+    height:1rem;
+  }
+  meter::-webkit-meter-bar{background:#fcefd2;border-radius:999px}
+  meter::-webkit-meter-optimum-value{background:linear-gradient(90deg,#ff7aa2,#ffb86b);border-radius:999px}
+  progress{appearance:none}
+  progress::-webkit-progress-bar{background:#fcefd2;border-radius:999px}
+  progress::-webkit-progress-value{background:linear-gradient(90deg,#22c55e,#3b82f6);border-radius:999px}
+  
+  /* Tipografia varia */
+  blockquote{
+    background:#fff;
+    border-left:8px solid var(--acc);
+    margin:1rem 0;
+    padding:.6rem .8rem;
+    border-radius:10px;
+    color:var(--muted);
+  }
+  cite{font-style:normal; font-weight:700; color:var(--acc2)}
+  kbd{
+    background:#fff;
+    border:2px solid var(--border);
+    border-bottom-width:4px;
+    padding:.1rem .35rem;
+    border-radius:6px;
+    font-weight:700;
+  }
+  
+  /* Link generici */
+  a{color:#5a3a8b}
+  a:hover{text-decoration:underline}
+  
+  /* Utility */
+  .note{color:var(--muted)}
+  img{max-width:100%}
+  

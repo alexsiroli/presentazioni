@@ -1,0 +1,212 @@
+/* === Tema MODERNO & MINIMAL — style1.css === */
+:root{
+    --bg:#f8fafc;
+    --fg:#0f172a;
+    --muted:#475569;
+    --card:#ffffff;
+    --border:#e2e8f0;
+    --acc:#2563eb;
+  
+    --radius:12px;
+    --space-1:.25rem;  /* 4px  */
+    --space-2:.5rem;   /* 8px  */
+    --space-3:.75rem;  /* 12px */
+    --space-4:1rem;    /* 16px */
+    --space-5:1.25rem; /* 20px */
+    --space-6:1.5rem;  /* 24px */
+  
+    --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  
+  /* Dark mode automatico */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220;
+      --fg:#e6edf3;
+      --muted:#9fb1c3;
+      --card:#0f1720;
+      --border:#1f2a37;
+      --acc:#4f8cff;
+    }
+  }
+  
+  /* Reset essenziale */
+  *{box-sizing:border-box}
+  html,body{
+    margin:0; padding:0;
+    background:var(--bg); color:var(--fg);
+    font-family:var(--sans); line-height:1.65;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  
+  /* Header minimal con separatore */
+  header{
+    padding:var(--space-5) var(--space-4);
+    border-bottom:1px solid var(--border);
+    background:var(--card);
+  }
+  header h1{
+    margin:0 0 var(--space-3) 0;
+    font-weight:700; letter-spacing:.2px;
+  }
+  header h1 small{color:var(--muted); font-weight:600}
+  
+  /* Navigazione chip */
+  nav[aria-label="Indice"] a{
+    display:inline-block;
+    margin:0 var(--space-2) 0 0;
+    padding:.35rem .6rem;
+    color:var(--fg);
+    text-decoration:none;
+    background:transparent;
+    border:1px solid var(--border);
+    border-radius:999px;
+    transition:border-color .12s ease, background .12s ease;
+  }
+  nav[aria-label="Indice"] a:hover{
+    border-color:var(--acc);
+    background:color-mix(in oklab, var(--acc) 8%, transparent);
+  }
+  nav[aria-label="Indice"] a:focus{
+    outline:none; box-shadow:0 0 0 3px color-mix(in oklab, var(--acc) 25%, transparent);
+  }
+  
+  /* Layout contenuto */
+  main{max-width:880px; margin:var(--space-5) auto; padding:0 var(--space-4)}
+  article{margin:var(--space-6) 0}
+  
+  /* Box informativi */
+  aside.quick-facts{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:var(--space-4);
+    border-radius:var(--radius);
+  }
+  aside.quick-facts ul{margin:0 0 0 1rem}
+  aside.quick-facts li{margin:.25rem 0}
+  
+  /* Figure pulita */
+  figure{
+    margin:var(--space-5) 0;
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:var(--space-3);
+    border-radius:var(--radius);
+  }
+  figure img{max-width:100%; display:block; border-radius:calc(var(--radius) - 4px)}
+  figcaption{margin-top:.4rem; color:var(--muted); font-size:.95rem}
+  
+  /* Titoli */
+  h2{margin:0 0 var(--space-3) 0; font-size:1.6rem}
+  h3{margin:var(--space-4) 0 var(--space-3) 0; font-size:1.1rem; color:var(--muted)}
+  
+  /* Definition list elegante */
+  dl{
+    display:grid; grid-template-columns:190px 1fr; gap:.5rem 1rem;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:var(--space-4);
+  }
+  dt{color:var(--muted); font-weight:600}
+  dd{margin:0}
+  
+  /* Tabella semplice */
+  table{
+    width:100%;
+    border-collapse:separate; border-spacing:0;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  caption{
+    caption-side:top; text-align:left;
+    padding:var(--space-3) var(--space-4);
+    color:var(--muted); font-weight:600;
+  }
+  thead th{
+    background:color-mix(in oklab, var(--border) 40%, var(--card));
+    color:var(--fg);
+  }
+  th,td{
+    padding:var(--space-3) var(--space-4);
+    border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover td{background:color-mix(in oklab, var(--border) 22%, var(--card))}
+  
+  /* Details */
+  details{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:var(--space-3) var(--space-4);
+    margin:var(--space-3) 0;
+  }
+  summary{cursor:pointer; font-weight:600}
+  
+  /* Evidenziazione */
+  mark{
+    background:color-mix(in oklab, var(--acc) 25%, transparent);
+    padding:0 .2rem; border-radius:.25rem;
+  }
+  
+  /* Skill */
+  .skill-list{
+    list-style:none; padding:0; margin:0;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+  }
+  .skill-list li{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--space-3) var(--space-4);
+    border-bottom:1px solid var(--border);
+  }
+  .skill-list li:last-child{border-bottom:0}
+  
+  /* meter/progress */
+  meter, progress{width:240px; height:.9rem}
+  meter{background:transparent}
+  meter::-webkit-meter-bar{background:color-mix(in oklab, var(--border) 55%, var(--card)); border-radius:999px}
+  meter::-webkit-meter-optimum-value{
+    background:var(--acc); border-radius:999px
+  }
+  progress{appearance:none}
+  progress::-webkit-progress-bar{background:color-mix(in oklab, var(--border) 55%, var(--card)); border-radius:999px}
+  progress::-webkit-progress-value{background:var(--acc); border-radius:999px}
+  
+  /* Tipografia */
+  blockquote{
+    margin:var(--space-5) 0;
+    padding:var(--space-3) var(--space-4);
+    background:var(--card);
+    border:1px solid var(--border);
+    border-left:4px solid var(--acc);
+    border-radius:var(--radius);
+    color:var(--muted);
+  }
+  cite{font-style:normal; font-weight:600; color:var(--fg)}
+  code,kbd{
+    font-family:var(--mono);
+    background:color-mix(in oklab, var(--border) 35%, var(--card));
+    padding:.15rem .4rem; border-radius:8px; border:1px solid var(--border);
+  }
+  
+  /* Link */
+  a{color:var(--acc); text-decoration:none}
+  a:hover{text-decoration:underline}
+  
+  /* Accessibilità focus */
+  :where(a,button,summary){outline:none}
+  :where(a,button,summary):focus-visible{
+    box-shadow:0 0 0 3px color-mix(in oklab, var(--acc) 30%, transparent);
+    border-radius:8px;
+  }
+  
+  /* Utility */
+  img{max-width:100%}
+  
