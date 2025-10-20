@@ -1,4 +1,4 @@
-# Progetto facoltativo (valutato): **Personalizza la tua Presentazione Web**
+# Progetto: **Il mio sito web**
 
 **Obiettivo:** partire da un piccolo sito già pronto, capirne la struttura (**HTML/CSS**) e **personalizzarlo** per raccontare te stesso/a (chi sei, interessi, obiettivi).
 È **facoltativo ma consigliato**; verrà **valutato** (vedi rubrica in fondo).
