@@ -1,7 +1,6 @@
 # Progetto: **Il mio sito web**
 
 **Obiettivo:** partire da un piccolo sito già pronto, capirne la struttura (**HTML/CSS**) e **personalizzarlo** per raccontare te stesso/a (chi sei, interessi, obiettivi).
-È **facoltativo ma consigliato**; verrà **valutato** (vedi rubrica in fondo).
 
 **Scadenza:** **mercoledì 5 novembre 2025, ore 21.00**
 **Consegna via e-mail a:** **[alex.siroli@ispascalcomandini.it](mailto:alex.siroli@ispascalcomandini.it)**
@@ -14,7 +13,7 @@
 * **Un computer** (Windows, macOS o Linux).
 * **Un browser** (Chrome, Edge, Firefox, Safari…).
 * **Visual Studio Code (VS Code)** installato.
-* Il **link GitHub** del progetto che vedi nel registro.
+* Il **link GitHub** del progetto che vedi nel registro (se stai leggendo questo file sei già nel posto giusto).
 
 > **Non servono conoscenze pregresse** di HTML, CSS o Git. Segui i passaggi.
 
