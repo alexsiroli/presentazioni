@@ -3,7 +3,7 @@
 **Obiettivo:** partire da un piccolo sito già pronto, capirne la struttura (**HTML/CSS**) e **personalizzarlo** per raccontare te stesso/a (chi sei, interessi, obiettivi).
 È **facoltativo ma consigliato**; verrà **valutato** (vedi rubrica in fondo).
 
-**Scadenza:** **giovedì 23 ottobre 2025, ore 19:30**
+**Scadenza:** **mercoledì 5 novembre 2025, ore 19:30**
 **Consegna via e-mail a:** **[alex.siroli@ispascalcomandini.it](mailto:alex.siroli@ispascalcomandini.it)**
 **Oggetto e-mail:** **Nome Cognome – [Tua Classe]** (esempio: `Mario Rossi – 2F`)
 
@@ -91,6 +91,6 @@ Ora sta a te analizzare il file `index.html`, e una volta capita la struttura se
      *(Esempio: `Mario Rossi – 2F`)*
    * **Allega** lo ZIP.
 
-> **Scadenza tassativa:** **giovedì 23 ottobre 2025, ore 19:30**. Invii dopo l’orario potrebbero non essere considerati.
+> **Scadenza tassativa:** **mercoledì 5 novembre 2025, ore 19:30**. Invii dopo l’orario potrebbero non essere considerati.
 
 Buon lavoro!
