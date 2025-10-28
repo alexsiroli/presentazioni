@@ -21,7 +21,7 @@
 
 ## 2) Scarica il progetto da GitHub (senza usare Git)
 
-1. Apri il **link GitHub** del progetto.
+1. Apri il **link GitHub** del progetto (sei già quì).
 2. Clicca il pulsante **Code** (di solito è verde).
 3. Clicca **Download ZIP**.
 4. Quando ha finito, **estrai lo ZIP** (tasto destro → *Estrai tutto…* su Windows; doppio clic su macOS e trascina la cartella fuori).
